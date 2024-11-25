@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "E:/sbu/7/FPGA/ISE codes/Matrix_Multiplier_phase2/MatrixMultiplier.xst" -ofn "E:/sbu/7/FPGA/ISE codes/Matrix_Multiplier_phase2/MatrixMultiplier.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 "MatrixMultiplier.ngc" MatrixMultiplier.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MatrixMultiplier_map.ncd MatrixMultiplier.ngd MatrixMultiplier.pcf 
+par -w -intstyle ise -ol high -mt off MatrixMultiplier_map.ncd MatrixMultiplier.ncd MatrixMultiplier.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MatrixMultiplier.twx MatrixMultiplier.ncd -o MatrixMultiplier.twr MatrixMultiplier.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MatrixMultiplier.ucf -p xc6slx9-tqg144-3 "MatrixMultiplier.ngc" MatrixMultiplier.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MatrixMultiplier_map.ncd MatrixMultiplier.ngd MatrixMultiplier.pcf 
+par -w -intstyle ise -ol high -mt off MatrixMultiplier_map.ncd MatrixMultiplier.ncd MatrixMultiplier.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MatrixMultiplier.twx MatrixMultiplier.ncd -o MatrixMultiplier.twr MatrixMultiplier.pcf -ucf MatrixMultiplier.ucf 

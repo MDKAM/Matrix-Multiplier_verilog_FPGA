@@ -1,0 +1,419 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: MatrixMultiplier.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MatrixMultiplier.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MatrixMultiplier"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : MatrixMultiplier
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\sbu\7\FPGA\ISE codes\Matrix_Multiplier_phase2\MatrixMultiplier.v" into library work
+Parsing module <MatrixMultiplier>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <MatrixMultiplier>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MatrixMultiplier>.
+    Related source file is "E:\sbu\7\FPGA\ISE codes\Matrix_Multiplier_phase2\MatrixMultiplier.v".
+        W_IN = 8
+        W_OUT = 17
+        ROWS_A = 2
+        COLS_A = 2
+        ROWS_B = 2
+        COLS_B = 2
+    Found 32-bit register for signal <n0062[31:0]>.
+    Found 32-bit register for signal <n0063[31:0]>.
+    Found 68-bit register for signal <n0064[67:0]>.
+    Found 17-bit register for signal <out>.
+    Found 1-bit register for signal <flag>.
+    Found 17-bit adder for signal <a[0][0][7]_a[0][1][7]_add_24_OUT> created at line 55.
+    Found 17-bit adder for signal <a[0][0][7]_a[0][1][7]_add_27_OUT> created at line 55.
+    Found 17-bit adder for signal <a[1][0][7]_a[1][1][7]_add_30_OUT> created at line 55.
+    Found 17-bit adder for signal <a[1][0][7]_a[1][1][7]_add_33_OUT> created at line 55.
+    Found 8x8-bit multiplier for signal <a[0][0][7]_b[0][0][7]_MuLt_22_OUT> created at line 55.
+    Found 8x8-bit multiplier for signal <a[0][1][7]_b[1][0][7]_MuLt_23_OUT> created at line 55.
+    Found 8x8-bit multiplier for signal <a[0][0][7]_b[0][1][7]_MuLt_25_OUT> created at line 55.
+    Found 8x8-bit multiplier for signal <a[0][1][7]_b[1][1][7]_MuLt_26_OUT> created at line 55.
+    Found 8x8-bit multiplier for signal <a[1][0][7]_b[0][0][7]_MuLt_28_OUT> created at line 55.
+    Found 8x8-bit multiplier for signal <a[1][1][7]_b[1][0][7]_MuLt_29_OUT> created at line 55.
+    Found 8x8-bit multiplier for signal <a[1][0][7]_b[0][1][7]_MuLt_31_OUT> created at line 55.
+    Found 8x8-bit multiplier for signal <a[1][1][7]_b[1][1][7]_MuLt_32_OUT> created at line 55.
+    Summary:
+	inferred   8 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred 150 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+Unit <MatrixMultiplier> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 8
+ 8x8-bit multiplier                                    : 8
+# Adders/Subtractors                                   : 4
+ 17-bit adder                                          : 4
+# Registers                                            : 5
+ 1-bit register                                        : 1
+ 17-bit register                                       : 1
+ 32-bit register                                       : 2
+ 68-bit register                                       : 1
+# Multiplexers                                         : 16
+ 17-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 2
+ 68-bit 2-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <MatrixMultiplier>.
+	Multiplier <Mmult_a[0][0][7]_b[0][0][7]_MuLt_22_OUT> in block <MatrixMultiplier> and adder/subtractor <Madd_a[0][0][7]_a[0][1][7]_add_24_OUT> in block <MatrixMultiplier> are combined into a MAC<Maddsub_a[0][0][7]_b[0][0][7]_MuLt_22_OUT>.
+	Multiplier <Mmult_a[0][0][7]_b[0][1][7]_MuLt_25_OUT> in block <MatrixMultiplier> and adder/subtractor <Madd_a[0][0][7]_a[0][1][7]_add_27_OUT> in block <MatrixMultiplier> are combined into a MAC<Maddsub_a[0][0][7]_b[0][1][7]_MuLt_25_OUT>.
+	Multiplier <Mmult_a[1][0][7]_b[0][0][7]_MuLt_28_OUT> in block <MatrixMultiplier> and adder/subtractor <Madd_a[1][0][7]_a[1][1][7]_add_30_OUT> in block <MatrixMultiplier> are combined into a MAC<Maddsub_a[1][0][7]_b[0][0][7]_MuLt_28_OUT>.
+	Multiplier <Mmult_a[1][0][7]_b[0][1][7]_MuLt_31_OUT> in block <MatrixMultiplier> and adder/subtractor <Madd_a[1][0][7]_a[1][1][7]_add_33_OUT> in block <MatrixMultiplier> are combined into a MAC<Maddsub_a[1][0][7]_b[0][1][7]_MuLt_31_OUT>.
+Unit <MatrixMultiplier> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 4
+ 8x8-to-17-bit MAC                                     : 4
+# Multipliers                                          : 4
+ 8x8-bit multiplier                                    : 4
+# Registers                                            : 150
+ Flip-Flops                                            : 150
+# Multiplexers                                         : 83
+ 1-bit 2-to-1 multiplexer                              : 68
+ 17-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 2
+ 68-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <MatrixMultiplier> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MatrixMultiplier, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 150
+ Flip-Flops                                            : 150
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MatrixMultiplier.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 154
+#      GND                         : 1
+#      LUT2                        : 1
+#      LUT3                        : 2
+#      LUT5                        : 68
+#      LUT6                        : 81
+#      VCC                         : 1
+# FlipFlops/Latches                : 150
+#      FD                          : 86
+#      FDRE                        : 64
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 32
+#      IBUF                        : 15
+#      OBUF                        : 17
+# DSPs                             : 8
+#      DSP48A1                     : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             150  out of  11440     1%  
+ Number of Slice LUTs:                  152  out of   5720     2%  
+    Number used as Logic:               152  out of   5720     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    152
+   Number with an unused Flip Flop:       2  out of    152     1%  
+   Number with an unused LUT:             0  out of    152     0%  
+   Number of fully used LUT-FF pairs:   150  out of    152    98%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          33
+ Number of bonded IOBs:                  33  out of    102    32%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      8  out of     16    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 158   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 10.961ns (Maximum Frequency: 91.232MHz)
+   Minimum input arrival time before clock: 5.439ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.961ns (frequency: 91.232MHz)
+  Total number of paths / destination ports: 7288 / 437
+-------------------------------------------------------------------------
+Delay:               10.961ns (Levels of Logic = 3)
+  Source:            Mmult_a[0][1][7]_b[1][1][7]_MuLt_26_OUT (DSP)
+  Destination:       out_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Mmult_a[0][1][7]_b[1][1][7]_MuLt_26_OUT to out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48A1:CLK->PCOUT47    1   6.743   0.000  Mmult_a[0][1][7]_b[1][1][7]_MuLt_26_OUT (Mmult_a[0][1][7]_b[1][1][7]_MuLt_26_OUT_PCOUT_to_Maddsub_a[0][0][7]_b[0][1][7]_MuLt_25_OUT_PCIN_47)
+     DSP48A1:PCIN47->P16    1   2.264   0.580  Maddsub_a[0][0][7]_b[0][1][7]_MuLt_25_OUT (a[0][0][7]_a[0][1][7]_add_27_OUT<16>)
+     LUT5:I4->O            2   0.205   0.864  mux101351 (c[0][0][16]_c[0][0][16]_mux_50_OUT<50>)
+     LUT6:I2->O            1   0.203   0.000  Mmux_col_out[0]_row_out[0]_wide_mux_54_OUT81 (col_out[0]_row_out[0]_wide_mux_54_OUT<16>)
+     FD:D                      0.102          out_16
+    ----------------------------------------
+    Total                     10.961ns (9.517ns logic, 1.444ns route)
+                                       (86.8% logic, 13.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2388 / 598
+-------------------------------------------------------------------------
+Offset:              5.439ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       a<1>_1_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to a<1>_1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           215   1.222   2.286  reset_IBUF (reset_IBUF)
+     LUT3:I0->O           40   0.205   1.405  _n0141_inv1 (_n0141_inv)
+     FDRE:CE                   0.322          a<1>_1_0
+    ----------------------------------------
+    Total                      5.439ns (1.749ns logic, 3.690ns route)
+                                       (32.2% logic, 67.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            out_16 (FF)
+  Destination:       out<16> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: out_16 to out<16>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  out_16 (out_16)
+     OBUF:I->O                 2.571          out_16_OBUF (out<16>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   10.961|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.43 secs
+ 
+--> 
+
+Total memory usage is 4503988 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

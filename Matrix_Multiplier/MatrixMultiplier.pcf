@@ -1,0 +1,69 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Dec 04 13:03:38 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+PIN Mmult_a[1][1][7]_b[1][0][7]_MuLt_29_OUT_pins<92> = BEL
+        "Mmult_a[1][1][7]_b[1][0][7]_MuLt_29_OUT" PINNAME CLK;
+PIN Mmult_a[0][1][7]_b[1][0][7]_MuLt_23_OUT_pins<92> = BEL
+        "Mmult_a[0][1][7]_b[1][0][7]_MuLt_23_OUT" PINNAME CLK;
+PIN Mmult_a[0][1][7]_b[1][1][7]_MuLt_26_OUT_pins<92> = BEL
+        "Mmult_a[0][1][7]_b[1][1][7]_MuLt_26_OUT" PINNAME CLK;
+PIN Mmult_a[1][1][7]_b[1][1][7]_MuLt_32_OUT_pins<92> = BEL
+        "Mmult_a[1][1][7]_b[1][1][7]_MuLt_32_OUT" PINNAME CLK;
+PIN Maddsub_a[0][0][7]_b[0][1][7]_MuLt_25_OUT_pins<92> = BEL
+        "Maddsub_a[0][0][7]_b[0][1][7]_MuLt_25_OUT" PINNAME CLK;
+PIN Maddsub_a[0][0][7]_b[0][0][7]_MuLt_22_OUT_pins<92> = BEL
+        "Maddsub_a[0][0][7]_b[0][0][7]_MuLt_22_OUT" PINNAME CLK;
+PIN Maddsub_a[1][0][7]_b[0][0][7]_MuLt_28_OUT_pins<92> = BEL
+        "Maddsub_a[1][0][7]_b[0][0][7]_MuLt_28_OUT" PINNAME CLK;
+PIN Maddsub_a[1][0][7]_b[0][1][7]_MuLt_31_OUT_pins<92> = BEL
+        "Maddsub_a[1][0][7]_b[0][1][7]_MuLt_31_OUT" PINNAME CLK;
+TIMEGRP clk = BEL "c<1>_1_0" BEL "c<1>_1_1" BEL "c<1>_1_2" BEL "c<1>_1_3" BEL
+        "c<1>_1_4" BEL "c<1>_1_5" BEL "c<1>_1_6" BEL "c<1>_1_7" BEL "c<1>_1_8"
+        BEL "c<1>_1_9" BEL "c<1>_1_10" BEL "c<1>_1_11" BEL "c<1>_1_12" BEL
+        "c<1>_1_13" BEL "c<1>_1_14" BEL "c<1>_1_15" BEL "c<1>_1_16" BEL
+        "c<1>_1_17" BEL "c<1>_1_18" BEL "c<1>_1_19" BEL "c<1>_1_20" BEL
+        "c<1>_1_21" BEL "c<1>_1_22" BEL "c<1>_1_23" BEL "c<1>_1_24" BEL
+        "c<1>_1_25" BEL "c<1>_1_26" BEL "c<1>_1_27" BEL "c<1>_1_28" BEL
+        "c<1>_1_29" BEL "c<1>_1_30" BEL "c<1>_1_31" BEL "c<1>_1_32" BEL
+        "c<1>_1_33" BEL "c<1>_1_34" BEL "c<1>_1_35" BEL "c<1>_1_36" BEL
+        "c<1>_1_37" BEL "c<1>_1_38" BEL "c<1>_1_39" BEL "c<1>_1_40" BEL
+        "c<1>_1_41" BEL "c<1>_1_42" BEL "c<1>_1_43" BEL "c<1>_1_44" BEL
+        "c<1>_1_45" BEL "c<1>_1_46" BEL "c<1>_1_47" BEL "c<1>_1_48" BEL
+        "c<1>_1_49" BEL "c<1>_1_50" BEL "c<1>_1_51" BEL "c<1>_1_52" BEL
+        "c<1>_1_53" BEL "c<1>_1_54" BEL "c<1>_1_55" BEL "c<1>_1_56" BEL
+        "c<1>_1_57" BEL "c<1>_1_58" BEL "c<1>_1_59" BEL "c<1>_1_60" BEL
+        "c<1>_1_61" BEL "c<1>_1_62" BEL "c<1>_1_63" BEL "c<1>_1_64" BEL
+        "c<1>_1_65" BEL "c<1>_1_66" BEL "c<1>_1_67" BEL "b<1>_1_0" BEL
+        "b<1>_1_1" BEL "b<1>_1_2" BEL "b<1>_1_3" BEL "b<1>_1_4" BEL "b<1>_1_5"
+        BEL "b<1>_1_6" BEL "b<1>_1_7" BEL "b<1>_1_8" BEL "b<1>_1_9" BEL
+        "b<1>_1_10" BEL "b<1>_1_11" BEL "b<1>_1_12" BEL "b<1>_1_13" BEL
+        "b<1>_1_14" BEL "b<1>_1_15" BEL "b<1>_1_16" BEL "b<1>_1_17" BEL
+        "b<1>_1_18" BEL "b<1>_1_19" BEL "b<1>_1_20" BEL "b<1>_1_21" BEL
+        "b<1>_1_22" BEL "b<1>_1_23" BEL "b<1>_1_24" BEL "b<1>_1_25" BEL
+        "b<1>_1_26" BEL "b<1>_1_27" BEL "b<1>_1_28" BEL "b<1>_1_29" BEL
+        "b<1>_1_30" BEL "b<1>_1_31" BEL "a<1>_1_0" BEL "a<1>_1_1" BEL
+        "a<1>_1_2" BEL "a<1>_1_3" BEL "a<1>_1_4" BEL "a<1>_1_5" BEL "a<1>_1_6"
+        BEL "a<1>_1_7" BEL "a<1>_1_8" BEL "a<1>_1_9" BEL "a<1>_1_10" BEL
+        "a<1>_1_11" BEL "a<1>_1_12" BEL "a<1>_1_13" BEL "a<1>_1_14" BEL
+        "a<1>_1_15" BEL "a<1>_1_16" BEL "a<1>_1_17" BEL "a<1>_1_18" BEL
+        "a<1>_1_19" BEL "a<1>_1_20" BEL "a<1>_1_21" BEL "a<1>_1_22" BEL
+        "a<1>_1_23" BEL "a<1>_1_24" BEL "a<1>_1_25" BEL "a<1>_1_26" BEL
+        "a<1>_1_27" BEL "a<1>_1_28" BEL "a<1>_1_29" BEL "a<1>_1_30" BEL
+        "a<1>_1_31" BEL "out_0" BEL "out_1" BEL "out_2" BEL "out_3" BEL
+        "out_4" BEL "out_5" BEL "out_6" BEL "out_7" BEL "out_8" BEL "out_9"
+        BEL "out_10" BEL "out_11" BEL "out_12" BEL "out_13" BEL "out_14" BEL
+        "out_15" BEL "out_16" PIN
+        "Mmult_a[1][1][7]_b[1][0][7]_MuLt_29_OUT_pins<92>" PIN
+        "Mmult_a[0][1][7]_b[1][0][7]_MuLt_23_OUT_pins<92>" PIN
+        "Mmult_a[0][1][7]_b[1][1][7]_MuLt_26_OUT_pins<92>" PIN
+        "Mmult_a[1][1][7]_b[1][1][7]_MuLt_32_OUT_pins<92>" PIN
+        "Maddsub_a[0][0][7]_b[0][1][7]_MuLt_25_OUT_pins<92>" PIN
+        "Maddsub_a[0][0][7]_b[0][0][7]_MuLt_22_OUT_pins<92>" PIN
+        "Maddsub_a[1][0][7]_b[0][0][7]_MuLt_28_OUT_pins<92>" PIN
+        "Maddsub_a[1][0][7]_b[0][1][7]_MuLt_31_OUT_pins<92>" BEL "flag" BEL
+        "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+
